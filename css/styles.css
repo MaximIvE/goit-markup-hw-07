@@ -804,11 +804,6 @@ border-radius: 0px 0px 4px 4px;
   margin-bottom: 20px;
   height: 120px;
   resize: none;
-  /* transition: placeholder 1000ms var(--function-time); */
-}
-
-.comment-input:focus.comment-input::placeholder{
-  color:var(--accent-color);
 }
 
 .comment-input::placeholder{
@@ -817,12 +812,12 @@ border-radius: 0px 0px 4px 4px;
   letter-spacing: 0.01em;
 }
 
-.form-field{
+.form-check{
   margin-bottom: 30px;
-  margin-left: 12px;
 }
 
 .check-text{
+  justify-content: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
