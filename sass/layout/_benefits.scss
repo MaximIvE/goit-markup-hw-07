@@ -1,0 +1,33 @@
+.benefits-list{
+    display: flex;
+    justify-content: center;
+}
+.benefits-blank{
+    margin-right: 30px;
+    width: calc((100%-90px)/4);
+}
+.benefits-blank:last-child{
+    margin-right: 0;
+}
+.benefits-vector-box{
+    @extend %list;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--background-elements);
+    margin-bottom: 30px;
+}
+.title-upercase{
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+}
+.benefits-title{
+    margin-bottom: 10px;
+    color: var(--second-title-color);
+}
+
+.benefits-text{
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--p-title-color);
+}

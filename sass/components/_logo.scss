@@ -1,0 +1,24 @@
+.logo{
+    @include font(700, 26px, 1.19, 0.03em);
+    @include effect-time(color);
+    font-family: Raleway;
+    text-decoration: none;
+    padding: 2px 4px;
+    &:hover, &:focus{
+        color: var(--accent-color);
+    }
+}
+
+
+.logo-header{
+    color:var(--second-title-color);
+    margin-right: 89px;
+}
+
+.logo-footer{
+    color: var(--background);
+}
+
+.logo-accent{
+    color:var(--accent-color);
+}
