@@ -1,11 +1,13 @@
-.clients-icons-list+.clients-icons-list{
+.clients{}
+
+.clients__list-icons+.clients__list-icons{
     margin-left: 30px;
 }
 
-.clients-logo{
+.clients__logo{
     @extend %list;
-    @include effect-time(border-color);
-    @include effect-time(color);
+    @include effect(border-color);
+    @include effect(color);
     height: 92px;
     width: 170px;
     border: 1px solid var(--icons-color);
@@ -23,6 +25,6 @@
     }
 }
 
-.clients-icon{
+.clients__icon{
     fill: currentColor;
 }

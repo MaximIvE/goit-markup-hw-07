@@ -1,15 +1,19 @@
-.benefits-list{
+.benefits{
+
+}
+
+.section__list{
     display: flex;
     justify-content: center;
 }
-.benefits-blank{
+.benefits__blank{
     margin-right: 30px;
     width: calc((100%-90px)/4);
 }
-.benefits-blank:last-child{
+.benefits__blank:last-child{
     margin-right: 0;
 }
-.benefits-vector-box{
+.benefits__vector-box{
     @extend %list;
     justify-content: center;
     width: 270px;
@@ -22,12 +26,12 @@
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
 }
-.benefits-title{
+.benefits__title{
     margin-bottom: 10px;
     color: var(--second-title-color);
 }
 
-.benefits-text{
+.benefits__text{
     @include font(null, 14px, 1.71, 0.03em);
     color: var(--p-title-color);
 }

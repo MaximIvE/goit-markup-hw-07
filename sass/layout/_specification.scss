@@ -1,4 +1,4 @@
-.spec-blank{
+.spcification__blank{
   display: flex;
   position: relative;
   align-items: end;
@@ -8,7 +8,7 @@
   }
 }
 
-.spec-label{
+.spcification__label{
   @extend %list;
   @include font(700, 14px, 1.14, 0.03em);
   justify-content: center;

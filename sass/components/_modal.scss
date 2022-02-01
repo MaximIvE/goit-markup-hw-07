@@ -27,41 +27,42 @@
     /* visibility: hidden; */
 }
 
-.modal-title{
+.modal__title{
     @include font(600, 20px, 1.15, 0.03em);
     text-align: center;
     color: var(--second-title-color);
     margin-bottom: 12px;
 }
 
-.form-field{
+.online__field{
     margin-bottom: 10px;
 }
 
-.input-wrap{
+.online__input-wrap{
     position: relative;
 }
 
-.input-icon{
-    @include effect-time(fill);
+.online__input-icon{
+    @include effect(fill);
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    .form-input:focus + &{
+    .online__input-form:focus + &{
         fill:var(--accent-color); 
     }
 }
 
-.online-lables{
+.online__lables{
     @include font(null, 12px, 1.17h, 0.01em);
     display: block;
     color:var(--p-title-color);
     margin-bottom: 4px;
+    transition: none;
 }
 
-.form-input{
-    @include effect-time(border-color);
+.online__input-form{
+    @include effect(border-color);
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -72,12 +73,12 @@
     }
 }
 
-.online-input{
+.online__input{
     height: 40px;
     padding-left: 42px;
 }
 
-.comment-input{
+.online__comment-input{
     padding: 12px 16px;
     margin-bottom: 20px;
     height: 120px;
@@ -91,7 +92,7 @@
     margin-bottom: 30px;
 }
 
-.check-text{
+.form-check__text{
     @extend %list;
     @include font(null, 14px, 1.71, 0.03em);
     justify-content: center;
@@ -105,21 +106,20 @@
         margin-right: 7px;
         justify-content: center;
     }
-    .policy-check:checked + & span{
+    .form-check__policy:checked + & span{
         border:none;
         background-color: var(--accent-color);
     }
 }
 
-.policy-icon{
+.form-check__icon{
     fill: transparent;
-    .policy-check:checked + .check-text &{
+    .form-check__policy:checked + .form-check__text &{
         fill: #ffffff;
     }
 }
 
-.check-link{
+.form-check__link{
     color:var(--accent-color);
     margin-left: 0.3em;
 } 
-

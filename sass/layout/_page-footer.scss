@@ -4,13 +4,13 @@
     background-color: var(--footer-color);
 }
 
-.footer-block{
+.footer__block{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
 
-.footer-contact-group{
+.footer__contact-group{
     display:flex;
     align-items: baseline;
 }
@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-.footer-list{
+.direct-block__list{
     @include font(null, 14px, 1.71, 0.03em);
     margin-bottom: 9px;
     color: var(--background);
@@ -29,7 +29,7 @@
     }
 }
 
-.footer-adds{
+.direct-block__adds{
     color: var(--background);
     transition-property: color;
     transition-duration: var(--effect-time);
@@ -41,7 +41,7 @@
     }
 }
 
-.footer-cont{
+.direct-block__cont{
     color: var(--footer-cont-color);
     transition-property: color;
     transition-duration: var(--effect-time);
@@ -56,39 +56,35 @@
 /* .footer-conact-group{
 display: flex;
 } */
-.footer-links-block{
+.links-block{
     margin-left: 70px;  
 }
 
-.footer-icons-title{
+.links-block__title{
     margin-bottom: 20px;
     color: var(--background);
 }
 
-.footer-social-link{
+.social-list__link_footer{
     background-color: var(--footer-icons-background); 
-
-    transition-property: background-color;
-    transition-duration: var(--effect-time);
-    transition-timing-function: var(--function-time); 
+    @include effect(background-color); 
     &:hover,
     &:focus{
         background-color: var(--accent-color);
     }
-
 }
 
-.footer-social-icon{
+.social-list__icon{
     fill: var(--background);
 }
 
-.footer-subscription{
+.subscription{
     margin-left:93px;
     display: flex;
     flex-grow: 1;
 }
 
-.subscript-elements{
+.subscript__elements{
     display:flex;
     justify-content: space-between;
     margin-top:20px;

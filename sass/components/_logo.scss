@@ -1,6 +1,6 @@
 .logo{
     @include font(700, 26px, 1.19, 0.03em);
-    @include effect-time(color);
+    @include effect(color);
     font-family: Raleway;
     text-decoration: none;
     padding: 2px 4px;
@@ -10,15 +10,15 @@
 }
 
 
-.logo-header{
-    color:var(--second-title-color);
+.header__logo{
+    color: var(--second-title-color);
     margin-right: 89px;
 }
 
-.logo-footer{
+.logo__footer{
     color: var(--background);
 }
 
-.logo-accent{
-    color:var(--accent-color);
+.logo__accent{
+    color: var(--accent-color);
 }

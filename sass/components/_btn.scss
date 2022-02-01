@@ -9,16 +9,16 @@
     color: var(--background);
 }
 
-.hero-btn{
+.hero__btn{
     @include font(700, 16px, 1.87, 0.06em);
-    @include effect-time(background-color);
+    @include effect(background-color);
     padding: 10px 32px; /*10 вертикальные 32 гоизонтальные*/
     &:hover{
       background-color: var(--second-btn-color);
     }
 }
 
-.subscription-btn{
+.subscription__btn{
     @extend %list;
     @include font(700, 16px, 1.87, 0.06em);
     text-align: center;
@@ -28,11 +28,11 @@
     margin-left:12px;
 }
 
-.filter-btn{
+.filter__btn{
     @include font(500, 16px, 1.62, 0.03em);
-    @include effect-time(background-color);
-    @include effect-time(color);
-    @include effect-time(box-shadow);
+    @include effect(background-color);
+    @include effect(color);
+    @include effect(box-shadow);
     padding: 6px 22px;
     color: var(--second-title-color);
     background: var(--background-elements);
@@ -43,7 +43,7 @@
     }
   }
 
-.modal-btn{
+.modal__btn{
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -51,9 +51,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.modal-close{
+.modal__close{
     @extend %list;
-    @include effect-time(fill);
+    @include effect(fill);
     justify-content: center;
     width: 30px;
     height: 30px;
@@ -69,4 +69,9 @@
         fill: var(--accent-color);
     }
 }
+
+.btn_accent{ 
+    background: var(--accent-color);
+    color: var(--background);
+  }
 

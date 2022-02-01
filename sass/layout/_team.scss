@@ -1,7 +1,7 @@
 .team{
     background-color: var(--background-elements);
 }
-.team-blank{
+.team__blank{
     background-color: var(--background);
     margin-right: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -11,18 +11,18 @@
     }
 }
 
-.team-content{
+.team__content{
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.team-title{
+.team__title{
     @include font(500, 16px, 1.19, 0.03em);
     margin-bottom: 10px;   
     text-align: center;
     color: var(--second-title-color)
 }
-.team-text{
+.team__text{
     @include font(null, 16px, 1.19, 0.03em);
     text-align: center;
     color: var(--p-title-color);
@@ -34,7 +34,7 @@
     justify-content: center;
 }
 
-.social-link{
+.social-list__link{
     @extend %list;
     height: 44px;
     width: 44px;
@@ -47,9 +47,9 @@
     }
 }
 
-.team-social-link{
+.social-list__team{
     color:var(--icons-color);
-    @include effect-time(color);
+    @include effect(color);
     &:hover,
     &:focus{
         background-color: var(--accent-color);
@@ -57,6 +57,6 @@
     }
 }
 
-.team-social-icon{
+.social-list__icon{
     fill: currentColor;
 }

@@ -26,12 +26,6 @@
 
 // Пока что применил к эффекту времени для ЛОГО
 
-
-.btn-accent{ 
-  background: var(--accent-color);
-  color: var(--background);
-}
-
 @mixin font($fw, $fs, $lh, $ls) {
   font-weight: $fw;
   font-size: $fs;
@@ -40,14 +34,9 @@
 }
 // @include font($fw, $fs, $lh, $ls);
 
-.effect-time{
-  transition-property: color;
-  transition-duration: var(--effect-time);
-  transition-timing-function: var(--function-time);
-}
-@mixin effect-time($tp) {
+@mixin effect($tp) {
   transition-property: $tp;
   transition-duration: var(--effect-time);
   transition-timing-function: var(--function-time);
 }
-// @include effect-time($tp);
+// @include effect($tp);
