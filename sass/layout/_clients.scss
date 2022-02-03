@@ -1,10 +1,15 @@
-.clients{}
-
-.clients__list-icons+.clients__list-icons{
-    margin-left: 30px;
+.clients{
+    display: flex;
+    justify-content: center;
 }
 
-.clients__logo{
+.clients__item{
+    &+&{
+        margin-left: 30px;
+    }
+}
+
+.clients__link{
     @extend %list;
     @include effect(border-color);
     @include effect(color);
@@ -14,13 +19,11 @@
     border-radius: 4px;
     justify-content: center;
     color:var(--icons-color); 
-    &:hover{
+    &:hover, &:focus{
         border-color: var(--accent-color);
         color: var(--accent-color);
     }
     &:focus{
-        border-color: var(--accent-color);
-        color: var(--accent-color);
         outline-color: var(--accent-color);
     }
 }

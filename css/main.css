@@ -35,7 +35,7 @@ ul {
   list-style: none;
 }
 
-.subscription__btn, .modal__close, .form-check__text, .form-check__text span, .contanier__headline, .contacts, .contacts__link, .benefits__vector-box, .spcification__label, .social-list__link, .clients__logo {
+.modal__close, .form-check__text, .form-check__text span, .contanier__header, .contacts, .contacts__link, .benefits__box, .specification__label, .social__icon, .clients__link {
   display: flex;
   align-items: center;
 }
@@ -52,7 +52,7 @@ img {
   height: auto;
 }
 
-.links {
+a {
   text-decoration: none;
 }
 
@@ -116,13 +116,7 @@ img {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  transition-property: background-color;
-  transition-duration: var(--effect-time);
-  transition-timing-function: var(--function-time);
-  transition-property: color;
-  transition-duration: var(--effect-time);
-  transition-timing-function: var(--function-time);
-  transition-property: box-shadow;
+  transition-property: background-color, color, box-shadow;
   transition-duration: var(--effect-time);
   transition-timing-function: var(--function-time);
   padding: 6px 22px;
@@ -194,6 +188,10 @@ img {
   color: var(--accent-color);
 }
 
+.logo__accent {
+  color: var(--accent-color);
+}
+
 .header__logo {
   color: var(--second-title-color);
   margin-right: 89px;
@@ -203,22 +201,17 @@ img {
   color: var(--background);
 }
 
-.logo__accent {
-  color: var(--accent-color);
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.spcification {
+.section__no-padding-top {
   padding-top: 0;
 }
 
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
+.section__team-background {
+  background-color: var(--background-elements);
 }
 
 .backdrop {
@@ -369,7 +362,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-.contanier__headline {
+.contanier__header {
   justify-content: end;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -377,7 +370,6 @@ img {
 
 .site-nav {
   display: flex;
-  /* margin-right: 331px; */
 }
 
 .site-nav__item {
@@ -404,12 +396,12 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav__accent {
+.site-nav__link_accent {
   color: var(--accent-color);
   position: relative;
 }
 
-.site-nav__accent::after {
+.site-nav__link_accent::after {
   content: '';
   width: 100%;
   height: 4px;
@@ -490,21 +482,21 @@ img {
   color: var(--background);
 }
 
-.section__list {
+.benefits {
   display: flex;
   justify-content: center;
 }
 
-.benefits__blank {
+.benefits__item {
   margin-right: 30px;
   width: calc((100%-90px)/4);
 }
 
-.benefits__blank:last-child {
+.benefits__item:last-child {
   margin-right: 0;
 }
 
-.benefits__vector-box {
+.benefits__box {
   justify-content: center;
   width: 270px;
   height: 120px;
@@ -522,6 +514,11 @@ img {
 }
 
 .benefits__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin-bottom: 10px;
   color: var(--second-title-color);
 }
@@ -533,18 +530,23 @@ img {
   color: var(--p-title-color);
 }
 
-.spcification__blank {
+.specification {
+  display: flex;
+  justify-content: center;
+}
+
+.specification__item {
   display: flex;
   position: relative;
   align-items: end;
   margin-right: 30px;
 }
 
-.spcification__blank:last-child {
+.specification__item:last-child {
   margin-right: 0;
 }
 
-.spcification__label {
+.specification__label {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -559,17 +561,18 @@ img {
 }
 
 .team {
-  background-color: var(--background-elements);
+  display: flex;
+  justify-content: center;
 }
 
-.team__blank {
+.team__item {
   background-color: var(--background);
   margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__blank:last-child {
+.team__item:last-child {
   margin-right: 0;
 }
 
@@ -602,7 +605,7 @@ img {
   justify-content: center;
 }
 
-.social-list__link {
+.social__icon {
   height: 44px;
   width: 44px;
   /* background-color: teal; */
@@ -611,7 +614,7 @@ img {
   justify-content: center;
 }
 
-.social-list__link + .social-list__link {
+.social__icon + .social__icon {
   margin-left: 10px;
 }
 
@@ -631,11 +634,16 @@ img {
   fill: currentColor;
 }
 
-.clients__list-icons + .clients__list-icons {
+.clients {
+  display: flex;
+  justify-content: center;
+}
+
+.clients__item + .clients__item {
   margin-left: 30px;
 }
 
-.clients__logo {
+.clients__link {
   transition-property: border-color;
   transition-duration: var(--effect-time);
   transition-timing-function: var(--function-time);
@@ -650,19 +658,22 @@ img {
   color: var(--icons-color);
 }
 
-.clients__logo:hover {
+.clients__link:hover, .clients__link:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
 
-.clients__logo:focus {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+.clients__link:focus {
   outline-color: var(--accent-color);
 }
 
 .clients__icon {
   fill: currentColor;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter {
@@ -728,8 +739,7 @@ img {
   /* overflow: auto;     */
 }
 
-.portfolio__links:hover .pirtfolio__img-txt,
-.portfolio__links:focus .pirtfolio__img-txt {
+.portfolio__links:hover .pirtfolio__img-txt, .portfolio__links:focus .pirtfolio__img-txt {
   transform: translateY(0);
 }
 
@@ -814,9 +824,6 @@ img {
   color: var(--footer-hover-text-two);
 }
 
-/* .footer-conact-group{
-display: flex;
-} */
 .links-block {
   margin-left: 70px;
 }
@@ -826,24 +833,24 @@ display: flex;
   color: var(--background);
 }
 
-.social-list__link_footer {
+.social__icon_footer {
   background-color: var(--footer-icons-background);
   transition-property: background-color;
   transition-duration: var(--effect-time);
   transition-timing-function: var(--function-time);
 }
 
-.social-list__link_footer:hover, .social-list__link_footer:focus {
+.social__icon_footer:hover, .social__icon_footer:focus {
   background-color: var(--accent-color);
 }
 
-.social-list__icon {
+.social-list__icon_footer {
   fill: var(--background);
 }
 
 .subscription {
   margin-left: 93px;
-  display: flex;
+  display: block;
   flex-grow: 1;
 }
 

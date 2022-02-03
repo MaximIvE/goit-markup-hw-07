@@ -1,19 +1,18 @@
+
 .benefits{
-
-}
-
-.section__list{
     display: flex;
     justify-content: center;
 }
-.benefits__blank{
+
+.benefits__item{
     margin-right: 30px;
     width: calc((100%-90px)/4);
+    &:last-child{
+        margin-right: 0;
+    };
 }
-.benefits__blank:last-child{
-    margin-right: 0;
-}
-.benefits__vector-box{
+
+.benefits__box{
     @extend %list;
     justify-content: center;
     width: 270px;
@@ -22,11 +21,15 @@
     background-color: var(--background-elements);
     margin-bottom: 30px;
 }
+
 .title-upercase{
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
 }
+
 .benefits__title{
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
     margin-bottom: 10px;
     color: var(--second-title-color);
 }
